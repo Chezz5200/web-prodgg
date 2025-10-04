@@ -1,5 +1,5 @@
 // Пароль администратора (можно изменить)
-const ADMIN_PASSWORD = "12345";
+const ADMIN_PASSWORD = "123";
 
 // Проверка пароля
 function checkAdmin() {
