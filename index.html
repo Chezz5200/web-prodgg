@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Магазин вещей</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="hero">
+    <h1>Магазин вещей</h1>
+    <p>Добавление товаров доступно только администратору</p>
+  </header>
+
+  <!-- Форма входа администратора -->
+  <section class="form-section" id="adminLogin">
+    <h2>Вход администратора</h2>
+    <input type="password" id="adminPassword" placeholder="Введите пароль" />
+    <button onclick="checkAdmin()">Войти</button>
+    <p id="loginMessage" style="color: red;"></p>
+  </section>
+
+  <!-- Форма добавления товара (скрыта по умолчанию) -->
+  <section class="form-section" id="productFormSection" style="display: none;">
+    <form id="productForm">
+      <input type="text" id="title" placeholder="Название товара" required />
+      <textarea id="description" placeholder="Описание товара" required></textarea>
+      <input type="number" id="price" placeholder="Цена (BYN)" required />
+      <input type="file" id="image" accept="image/*" required />
+      <button type="submit">Создать брошюру</button>
+    </form>
+  </section>
+
+  <!-- Список товаров -->
+  <section id="brochures" class="brochure-list">
+    <h2>Брошюры товаров</h2>
+    <div id="brochureContainer"></div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Магазин вещей. Все права защищены.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
